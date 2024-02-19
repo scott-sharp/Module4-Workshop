@@ -96,6 +96,35 @@ const sales = JSON.parse(`[{
 
 
 
+function salesBonuses () {
+    let employee1Sales = 0
+    let employee2Sales = 0
+    let employee3Sales = 0
+    let employee4Sales = 0
+    let employee5Sales = 0
+    for (let index = 0; index < sales.length; index++) {
+        if (sales[index].staffId === 1) {
+            employee1Sales += sales[index].price;
+        }
+        if (sales[index].staffId === 2) {
+            employee2Sales += sales[index].price;
+        }
+        if (sales[index].staffId === 3) {
+            employee3Sales += sales[index].price;
+        }
+        if (sales[index].staffId === 4) {
+            employee4Sales += sales[index].price;
+        }
+        if (sales[index].staffId === 5) {
+            employee5Sales += sales[index].price;
+
+        }    
+    }
+    console.log(`Employee 1 Sales: ${employee1Sales}. Employee 2 Sales: ${employee2Sales}. Employee 3 Sales: ${employee3Sales}. Employee 4 Sales: ${employee4Sales}. Employee 5 Sales: ${employee5Sales}.`)
+} 
+    
+salesBonuses();
+
 
 let totalSalesAmount = 0;
 
